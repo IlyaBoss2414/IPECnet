@@ -40,6 +40,11 @@ A model was also studied in which the physico-chemical features of each polymer 
 # Results
 PAK \ HDPE and ionine 3,3 bromide \ MAC were included in the test sample as the most in demand in the field of creating bactericidal coatings.
 
+Of great interest are the results obtained using deep learning models created on the basis of an algorithm for working with multiparametric chemical problems developed during the solution of the problem. Three approaches have been proposed and investigated to account for both the physico-chemical properties of polymers and to account for their structure. 
+
+
+![alt text](images/table.png)
+
 1) ML-approach
    
 The list of selected predicted features [PA_BalabanJ, PS_fr_Ndealkylation1, PA_EState_VSA7, PS_SlogP_VSA4, PS_SMR_VSA4, PA_SMR_VSA5, PS_fr_unbrch_alkane, PA_SPS, PA_VSA_EState8, PS_qed, PA_DP, PC_DP, NaCl, PA_idx, PC_idx, eps , eps1, eps2] allows us to identify some features of the formation of IPEC. Firstly, both components of the system have an impact on the formation of the complex, and not mainly an excess polymer, as was assumed under the initial hypothesis. Secondly, the initial assumption about the importance of the properties of the medium for the formation of IPEC, in particular the ionic strength of the solution, as well as the ratio of the degrees of polymerization of the components, was confirmed.
@@ -48,9 +53,14 @@ Code is available on IPEC_ML.ipynb
 
 2) model.py
 
-3) model_pairing.py
-  
+The first model, created on the basis of combining vectors of all features and the general embedding of polymer structures obtained using polyBERT, demonstrated results significantly inferior to those obtained using classical ML approaches. This result may be due to the small amount of data available for training, as well as the need to take into account the properties of each component of the system when training independently.
+
+
+3) model_pairing.py  
 4) model_pairing_common.py
+
+
+From this point of view, the second (model_pairing) and third (model_pairing_common) models, created on the basis of an independent presentation of the characteristics of each polymer, showed more outstanding results, only slightly inferior to the approaches of classical ML. Thus, it is possible to make an assumption about the prospects of the proposed approach when working with multicomponent chemical systems. This approach has a number of advantages: the possibility of modification, the absence of the need for feature selection, as well as the potential to improve quality when expanding the data set.
 
 # Usage and dependencies
 
