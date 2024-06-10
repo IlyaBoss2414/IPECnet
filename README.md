@@ -42,6 +42,8 @@ PAK \ HDPE and ionine 3,3 bromide \ MAC were included in the test sample as the 
    
 The list of selected predicted features [PA_BalabanJ, PS_fr_Ndealkylation1, PA_EState_VSA7, PS_SlogP_VSA4, PS_SMR_VSA4, PA_SMR_VSA5, PS_fr_unbrch_alkane, PA_SPS, PA_VSA_EState8, PS_qed, PA_DP, PC_DP, NaCl, PA_idx, PC_idx, eps , eps1, eps2] allows us to identify some features of the formation of IPEC. Firstly, both components of the system have an impact on the formation of the complex, and not mainly an excess polymer, as was assumed under the initial hypothesis. Secondly, the initial assumption about the importance of the properties of the medium for the formation of IPEC, in particular the ionic strength of the solution, as well as the ratio of the degrees of polymerization of the components, was confirmed.
 
+Code is available on IPEC_ML.ipynb
+
 2) model.py
 
 3) model_pairing.py
@@ -49,6 +51,9 @@ The list of selected predicted features [PA_BalabanJ, PS_fr_Ndealkylation1, PA_E
 4) model_pairing_common.py
 
 # Usage and dependencies
+
+ML-approach IPEC_ML.ipynb.
+DL-approach IPEC_DL.ipynb
 
 Launch these notebooks in google colab.
 The project was done with Python 3.8.5
