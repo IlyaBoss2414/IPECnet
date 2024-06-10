@@ -14,6 +14,8 @@ Tasks:
 # Data
 The data on the phase stability of IPEC are the curves of turbidimetric titration, a method for measuring the intensity of the luminous flux passing through a solution containing suspended particles. An increase in the turbidity of the solution indicates the formation of aggregates caused by the phase separation of the IPEC. As an indicator of the stable existence of a polyelectrolyte complex, according to the approach developed in the field, the critical value of the molar charge ratio of lyophilizing (in excess of molar ratios of links) to blocking (in short supply) polymers was chosen  - the value of phi* in the graph below.
 
+![alt text](images/Turbodimetry_curve.jpg)
+
 The dataset consists of 269 pairs – polyanion/ polycation pairs with known physico-chemical properties of monomers, the chemical formula of the monomer link, synthesis conditions and target parameters – indicators of the stable existence of the polyelectrolyte complex.  The physicochemical properties of polyelectrolytes were partially obtained from the chemical structure of monomers using the rdkit.Chem library.Descriptors.
 
 # Models
@@ -22,6 +24,8 @@ To solve our problem, the following several models have been developed and studi
 
 1) The embeddings of each polymer created using polyBERT are concatenated and passed through a fully connected layer to reduce dimensionality. The normalized physico-chemical features of polymers are also passed through a fully connected layer to obtain embedding of the same dimension as the embeddings of structures. Next, both representations are concatenated and passed through the third fully connected layer, at the output of which we get a normalized target.
 The qualitative structure of the network is shown in the graph below
+
+![alt text](images/model1.jpg)
 
 A model was also studied in which the physico-chemical features of each polymer were concatenated in pairs with embedding of the chemical structure of the monomer.
 
