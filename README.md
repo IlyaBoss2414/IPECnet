@@ -35,6 +35,8 @@ A model was also studied in which the physico-chemical features of each polymer 
 
 2) The normalized physico-chemical features of each polymer were passed through a fully bonded layer and concatenated with embedding of each polymer created using polyBERT. Then the generalized embedding of each polymer was passed through another fully connected layer and concatenated with the embedding of another polymer at the output. A vector consisting of the remaining features characterizing the environment in which the formation of IPEC occurs was added to the combined embedding. The final vector was again passed through fully connected layers, at the output of which a normalized target was obtained. The qualitative structure of the network is shown in the graph below
 
+![alt text](images/model2.png)
+
 # Results
 PAK \ HDPE and ionine 3,3 bromide \ MAC were included in the test sample as the most in demand in the field of creating bactericidal coatings.
 
