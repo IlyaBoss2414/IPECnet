@@ -42,8 +42,7 @@ PAK \ HDPE and ionine 3,3 bromide \ MAC were included in the test sample as the 
 
 Of great interest are the results obtained using deep learning models created on the basis of an algorithm for working with multiparametric chemical problems developed during the solution of the problem. Three approaches have been proposed and investigated to account for both the physico-chemical properties of polymers and to account for their structure. 
 
-
-![alt text](images/table.png)
+![alt text](images/table.jpg)
 
 1) ML-approach
    
