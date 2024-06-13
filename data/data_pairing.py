@@ -86,6 +86,7 @@ def prepare_data_pairing(df):
     
     
     # Original list
+    list_features.remove("phi")
     elements = list_features
 
     # Initialize empty lists for PA, PC, and other elements
