@@ -1,4 +1,3 @@
-# pytorch lightning, адам лучше
 import lightning as L
 import torch.nn.functional
 import torchmetrics
