@@ -4,7 +4,7 @@ import torch
 from torch.utils.data import Dataset
 from sklearn.preprocessing import StandardScaler
 
-def prepare_data(df):
+def prepare_data_pairing(df):
     list_features = df.select_dtypes(exclude=['object']).columns.tolist()
     list_features.remove("Unnamed: 0")
     df_test = pd.concat([df.loc[(df["PA_idx"] == 1) & (df["PC_idx"] == 3)].copy(), df.loc[(df["PA_idx"] == 4) & (df["PC_idx"] == 2)].copy()])
