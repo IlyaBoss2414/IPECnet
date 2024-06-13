@@ -3,7 +3,7 @@ import torch.nn as nn
 from transformers import AutoModel, AutoTokenizer
 
 
-class IPEC_net_upd_pare(nn.Module):
+class IPEC_net_pairing_coomon(nn.Module):
     def __init__(self, PA_featureslen = 10, PC_featureslen = 10, Common_featureslen = 10):
         super(IPEC_net_upd_pare, self).__init__()
 
