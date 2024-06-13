@@ -78,7 +78,7 @@ def prepare_data(df):
             return inp_PA, inp_PC, concatenated_features, target
 
 
-
+    list_features.remove("phi")
     train_set = CustomDatasetBERT(df_train_scaled, list_features)
     val_set = CustomDatasetBERT(df_val_scaled, list_features)
     test_set = CustomDatasetBERT(df_test_scaled, list_features)
