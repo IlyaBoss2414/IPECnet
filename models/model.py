@@ -1,7 +1,3 @@
-# создать файл модели, сохранить и подгруать файл модели в блокнот. Обработка данных и модель. И в обучении и в тестировании, отдельные блокноты.
-# requiraments
-# с сайта курса есть мануал как сделать автоматически,
-
 import torch
 import torch.nn as nn
 from transformers import AutoModel, AutoTokenizer
