@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 
 def prepare_data(df):
     list_features = df.select_dtypes(exclude=['object']).columns.tolist()
-    list_features = list_features.remove("Unnamed: 0")
+    list_features.remove("Unnamed: 0")
     df_test = pd.concat([df.loc[(df["PA_idx"] == 1) & (df["PC_idx"] == 3)].copy(), df.loc[(df["PA_idx"] == 4) & (df["PC_idx"] == 2)].copy()])
     df_train_all = df.drop(index=df_test.index)  # Sample 20% for the validation set
     df_train = df_train_all.sample(frac=0.8, random_state = 42)  # Sample 20% for the test set
