@@ -5,7 +5,7 @@ from transformers import AutoModel, AutoTokenizer
 
 class IPEC_net_pairing(nn.Module):
     def __init__(self, PA_featureslen = 10, PC_featureslen = 10, Common_featureslen = 10):
-        super(IPEC_net_upd_pare, self).__init__()
+        super(IPEC_net_pairing, self).__init__()
 
         self.PA_featureslen = PA_featureslen
         self.PC_featureslen = PC_featureslen
