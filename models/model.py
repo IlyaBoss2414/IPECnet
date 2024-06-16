@@ -3,9 +3,9 @@ import torch.nn as nn
 from transformers import AutoModel, AutoTokenizer
 
 
-class IPEC_net(nn.Module):
+class IPEC_net_upd(nn.Module):
     def __init__(self, featureslen=10):
-        super(IPEC_net, self).__init__()
+        super(IPEC_net_upd, self).__init__()
         
         self.featureslen = featureslen
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
