@@ -1,4 +1,4 @@
-# IPEC
+# IPEC_net - The world's first model for predicting the area of existence of water-soluble interpolyelectrolyte complexes for solving biomedical problems
 
 This work is devoted to the development of the world's first machine learning-based model for predicting the area of existence of water-soluble interpolyelectrolyte complexes for solving biomedical problems. A new approach is proposed that takes into account both the physico-chemical properties of polyelectrolytes and the chemical structures of their monomeric units. The developed approach is universal and can be used to predict the properties of multicomponent systems of a different chemical nature. The results of the work were applied to select the optimal composition of interpolyelectrolyte complexes for various environmental conditions in order to create bactericidal coatings.
 
