@@ -51,7 +51,7 @@ Fig.2 The scheme of  “IPECnet” model
 Fig.3 The scheme of  “IPECnet without chemistry” model
 
 
-
+List of features are presented in Features.txt
 The project was done with Python 3.8.5
 
 # Literature
