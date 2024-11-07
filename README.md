@@ -34,7 +34,7 @@ Next model was constructed based on the concatenation of all the physical-chemis
 Each polymer's embeddings are created using polyBERT and then concatenated. These embeddings are passed through a fully connected layer to reduce the dimensionality. In addition, the normalized physico-chemical features of the polymers are also passed through another fully connected layer. This results in an embedding of the same size as the structure embeddings.
 Next, both these representations are concatenated and passed through a third fully connected layer. At the output of this layer, we get a target value. The qualitative structure of the network is presented on Figure 1. The code of model is presented on the IPECnet_light.py
 
-![alt text](images/IPEC_net_light.jpg)
+![alt text](images/IPECnet_light.jpg)
 Fig.1 The scheme of “IPEC_net light” model 
 
 3) IPECnet 
@@ -47,7 +47,7 @@ Fig.2 The scheme of  “IPECnet” model
 4) IPECnet without chemistry
 ‘IPEC_net without chemistry’ is a model based on the principle of independent consideration of the properties of polymer components, but without taking into account the embeddings of their chemical structure. The qualitative structure of the network is shown in Figure 3. The code of model is presented on the IPECnet_without_chemistry.py
 
-![alt text](images/IPECnet_nochem.jpg)
+![alt text](images/IPECnet_without_chemistry.jpg)
 Fig.3 The scheme of  “IPECnet without chemistry” model
 
 
