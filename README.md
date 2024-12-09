@@ -13,7 +13,7 @@ Tasks:
 # Data
 The data on the phase stability of IPEC are the curves of turbidimetric titration, a method for measuring the intensity of the luminous flux passing through a solution containing suspended particles. An increase in the turbidity of the solution indicates the formation of aggregates caused by the phase separation of the IPEC. As an indicator of the stable existence of a polyelectrolyte complex, according to the approach developed in the field, the critical value of the molar charge ratio of lyophilizing (in excess of molar ratios of links) to blocking (in short supply) polymers was chosen  - the value of phi* in the graph below.
 
-![alt text](images/Turbodimetry_curve.jpg)
+![alt text](images/Turbodimetry_curve_.jpg)
 
 Fig.1 Dependence of relative turbidity of mixtures of solutions 
 PAK\o and Ionine of various degrees of polymerization depend on the composition of the mixture.  Smas=0.005 M; 
@@ -34,7 +34,7 @@ Next model was constructed based on the concatenation of all the physical-chemis
 Each polymer's embeddings are created using polyBERT and then concatenated. These embeddings are passed through a fully connected layer to reduce the dimensionality. In addition, the normalized physico-chemical features of the polymers are also passed through another fully connected layer. This results in an embedding of the same size as the structure embeddings.
 Next, both these representations are concatenated and passed through a third fully connected layer. At the output of this layer, we get a target value. The qualitative structure of the network is presented on Figure 1. The code of model is presented on the IPECnet_light.py
 
-![alt text](images/IPECnet_light.jpg)
+![alt text](images/IPECnet_light.png)
 Fig.1 The scheme of “IPEC_net light” model 
 
 3) IPECnet 
