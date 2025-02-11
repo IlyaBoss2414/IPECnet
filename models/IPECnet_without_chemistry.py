@@ -12,10 +12,6 @@ class IPEC_net_pairing_priz(nn.Module):
         self.Common_featureslen = Common_featureslen
 
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-        self.tokenizer = AutoTokenizer.from_pretrained("kuelumbus/polyBERT")
-        self.polyBERT = AutoModel.from_pretrained("kuelumbus/polyBERT")
-
         
         self.feature_PA = nn.Sequential(
             nn.Linear(self.PA_featureslen, 64),
@@ -67,27 +63,9 @@ class IPEC_net_pairing_priz(nn.Module):
             nn.Linear(64, 1)
         )
 
-    def mean_pooling(self, x):
-        encoded_input = self.tokenizer(
-            x, padding=True, truncation=True, return_tensors="pt"
-        ).to(self.device)
-        model_output = self.polyBERT(**encoded_input)
-        token_embeddings = model_output[0]
-        attention_mask = encoded_input["attention_mask"]
-        input_mask_expanded = (
-            attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
-        )
-
-        return torch.sum(token_embeddings * input_mask_expanded, 1) / torch.clamp(
-            input_mask_expanded.sum(1), min=1e-9
-        )
 
     def forward(self, x, y, PA_features, PC_features, Common_features):
         int_PA, int_PC, PA_features, PC_features, Common_features = x, y, PA_features, PC_features, Common_features
-
-        out_1 = self.mean_pooling(int_PA)
-        out_2 = self.mean_pooling(int_PC)
-
 
         # Convert input strings to tensors if necessary
         if isinstance(int_PA, str):
