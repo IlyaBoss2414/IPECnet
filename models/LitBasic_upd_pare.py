@@ -3,6 +3,7 @@ import torch.nn.functional
 import torchmetrics
 from torch import optim
 from lion_pytorch import Lion
+import torch.nn as nn
 
 class LitBasic_upd_pare(L.LightningModule):
     def __init__(self, model, only_head=False):
