@@ -4,7 +4,7 @@ import torch
 from sklearn.preprocessing import StandardScaler
 from torch.utils.data import Dataset, DataLoader, WeightedRandomSampler
 
-def prepare_data_pairing(df_train, df_val, df_test):
+def prepare_data(df_train, df_val, df_test):
 
     list_features = df_train.select_dtypes(exclude=['object']).columns.tolist()
     list_features.remove("phi")
