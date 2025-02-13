@@ -108,14 +108,14 @@ def prepare_data(df_train, df_val, df_test):
     # Create the DataLoader with the WeightedRandomSampler
 
 
-    train_set = CustomDatasetBERT_upd_pare(df_train_scaled, pa_list, pc_list, other_list)
-    val_set = CustomDatasetBERT_upd_pare(df_val_scaled, pa_list, pc_list, other_list)
-    test_set = CustomDatasetBERT_upd_pare(df_test_scaled, pa_list, pc_list, other_list)
-
+    train_set = CustomDatasetBERT_upd(df_train_scaled, list_features)
+    val_set = CustomDatasetBERT_upd(df_val_scaled, list_features)
+    test_set = CustomDatasetBERT_upd(df_test_scaled, list_features)
+    
     batch_size_all = 32
-    train_loader = DataLoader(train_set, batch_size = batch_size_all, sampler=train_sampler)
-    val_loader = torch.utils.data.DataLoader(val_set, batch_size = batch_size_all, shuffle=False)
-    test_loader = torch.utils.data.DataLoader(test_set, batch_size = batch_size_all, shuffle=False)
+    train_loader = torch.utils.data.DataLoader(train_set, batch_size = batch_size_all, sampler=train_sampler)
+    val_loader = torch.utils.data.DataLoader(val_set, batch_size=8, shuffle=False)
+    test_loader = torch.utils.data.DataLoader(test_set, batch_size=8, shuffle=False)
 
     
     return train_loader, val_loader, test_loader
