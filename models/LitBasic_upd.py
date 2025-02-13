@@ -132,7 +132,8 @@ class LitBasic_upd(L.LightningModule):
     def on_test_epoch_end(self):
 
         acc_value_test = self.test_acc.compute()
-        self.log("AUC/test: ", acc_value_test)
+        auc_test = float(f"{acc_value_test.item():.1f}")
+        print(f"AUC/test: {auc_test}") 
         self.test_acc.reset()
 
 
