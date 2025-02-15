@@ -30,6 +30,7 @@ class LitBasic_upd_pare(L.LightningModule):
         self.preds_before = []
         self.test_preds = None  # To store predictions after testing
         self.test_targets = None 
+        self.auc_test = None
 
     def configure_optimizers(self):
         if self.only_head:
@@ -170,6 +171,7 @@ class LitBasic_upd_pare(L.LightningModule):
 
         self.test_preds = test_preds
         self.test_targets = test_targets
+        self.auc_test = acc_value_test
         
         pred_before = torch.cat(self.preds_before, dim=0)
 
