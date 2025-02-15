@@ -29,6 +29,7 @@ class LitBasic_upd(L.LightningModule):
 
         self.test_preds = None
         self.test_targets = None
+        self.auc_test = None
         
 
 
@@ -147,6 +148,7 @@ class LitBasic_upd(L.LightningModule):
 
         self.test_preds = test_preds
         self.test_targets = test_targets
+        self.auc_test = acc_value_test
         
         self.preds.clear()
         self.targets.clear()
