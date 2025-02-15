@@ -26,6 +26,9 @@ class LitBasic_upd_priz(L.LightningModule):
         
         self.preds = []
         self.targets = []
+
+        self.test_preds = None
+        self.test_targets = None
                 
 
     def configure_optimizers(self):
@@ -140,8 +143,10 @@ class LitBasic_upd_priz(L.LightningModule):
         
         test_preds = torch.cat(self.preds, dim=0)
         test_targets = torch.cat(self.targets, dim=0)
+
+        self.test_preds = test_preds
+        self.test_targets = test_targets
         
         self.preds.clear()
         self.targets.clear()
         
-        return test_preds, test_targets
