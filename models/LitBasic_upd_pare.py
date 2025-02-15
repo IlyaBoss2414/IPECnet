@@ -28,6 +28,8 @@ class LitBasic_upd_pare(L.LightningModule):
         self.targets = []
         
         self.preds_before = []
+        self.test_preds = None  # To store predictions after testing
+        self.test_targets = None 
 
     def configure_optimizers(self):
         if self.only_head:
@@ -165,6 +167,9 @@ class LitBasic_upd_pare(L.LightningModule):
         # Concatenate stored predictions and targets
         test_preds = torch.cat(self.preds, dim=0)
         test_targets = torch.cat(self.targets, dim=0)
+
+        self.test_preds = test_preds
+        self.test_targets = test_targets
         
         pred_before = torch.cat(self.preds_before, dim=0)
 
@@ -172,5 +177,3 @@ class LitBasic_upd_pare(L.LightningModule):
         self.preds.clear()
         self.targets.clear()
         self.preds_before.clear()
-
-        return test_preds, test_targets
