@@ -46,7 +46,7 @@ List of features are presented in Features.txt
 
 # IPECnet_test.ipynb
 
-A google colab notebook, which contains code for uploading pre-trained model weights, verifying the results, building bootstrap model comparisons, and outputting learning curves from saved logs using the Lightnings package. Each researcher has the opportunity to reproduce the results.
+A google colab notebook, which contains code for uploading pre-trained model weights, verifying the results, building bootstrap model comparisons, and outputting learning curves from saved logs using the Lightnings package. Each researcher has the opportunity to reproduce the results just to run all cells. 
 
 # Article
 The results of aorh are presented in aarticle in Physical Chemistry Chemical Physics, 2025, DOI: 10.1039/D4CP04775C
@@ -55,7 +55,7 @@ https://pubs.rsc.org/en/content/articlelanding/2025/cp/d4cp04775c/unauth
 # Setup python version
 The project was done with Python 3.8.5
 
-All required packages are written in requirements.txt
+All required packages are written in requirements.txt. In IPECnet_test.ipynb are presented code to install all erquirements versions.
 
 We evaluated several architectures and selected a fully connected neural network (FCNN) through rigorous hyperparameter tuning to ensure robust training. The FCNN was constructed using PyTorch’s nn.Linear layers with ReLU activation and 0.5 dropout for regularization. For binary classification tasks, we employed BCEWithLogitsLoss—which integrates sigmoid activation with binary cross-entropy—to enhance numerical stability and gradient flow.
 Training was conducted on Yandex DataSphere using a c1.8 environment (8 vCPU, 64 GB RAM) over 200 epochs. To further mitigate overfitting, we used the AdamW optimizer (lr = 1e3) along with a ReduceLROnPlateau scheduler (factor = 0.5, patience = 3). A fixed threshold of 0.5 was maintained for F1 and Accuracy evaluations, ensuring stability and interpretability,
