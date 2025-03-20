@@ -56,8 +56,11 @@ The project was done with Python 3.8.5
 
 # Contacts:
 To ask more questions about that project, leave any recomendations, suggestions and feedback about that project and its code or get other data be free to contact Ilya Grigoryan:
+
 Mail: grigorian.iv19@physics.msu.ru
+
 Telegram: @grilyav
+
 VK: https://vk.com/prancingilya
 
 # Acknowledgments:
