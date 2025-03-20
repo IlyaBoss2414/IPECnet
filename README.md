@@ -1,14 +1,6 @@
 # IPECnet: ML model for predicting the area of water solubility of interpolyelectrolyte complexes
 
-This work is devoted to the development of the world's first machine learning-based model for predicting the area of existence of water-soluble interpolyelectrolyte complexes for solving biomedical problems. A new approach is proposed that takes into account both the physico-chemical properties of polyelectrolytes and the chemical structures of their monomeric units. The developed approach is universal and can be used to predict the properties of multicomponent systems of a different chemical nature. The results of the work were applied to select the optimal composition of interpolyelectrolyte complexes for various environmental conditions in order to create bactericidal coatings.
-
-# Aim and tasks
-The purpose of this work is to develop a model for determining the stability range of interpolyelectrolyte complexes formed by various pairs of polyelectrolytes depending on environmental conditions. The creation of such a model will reduce the selection time of the IPEC composition for solving scientific and applied problems and identify the key factors influencing their formation.
-
-Tasks:
-1. Preprocess data
-2. Develop a neural network  
-3. Compare approaches based on deep learning
+Interpolyelectrolyte complexes (IPECs) are known for years as classics representative of smart polymers. Solubility of IPECs in water-salt media is driven by numerous factors connected with polymer component parameters and media composition. This work is devoted to the development of the world's first machine learning-based model for predicting the area of existence of water-soluble IPECs for solving biomedical problems. A new approach is proposed that takes into account both the physico-chemical properties of polyelectrolytes and the chemical structures of their monomeric units. The developed approach is universal and can be used to predict the properties of multicomponent systems of a different chemical nature. The results of the work were applied to select the composition of water-soluble IPECs for treatment of surfaces 
 
 # Data
 The data on the phase stability of IPEC are the curves of turbidimetric titration, a method for measuring the intensity of the luminous flux passing through a solution containing suspended particles. An increase in the turbidity of the solution indicates the formation of aggregates caused by the phase separation of the IPEC. As an indicator of the stable existence of a polyelectrolyte complex, according to the approach developed in the field, the critical value of the molar charge ratio of lyophilizing (in excess of molar ratios of links) to blocking (in short supply) polymers was chosen  - the value of phi* in the graph below.
@@ -53,6 +45,15 @@ Fig.3 The scheme of  “IPECnet without chemistry” model
 
 List of features are presented in Features.txt
 The project was done with Python 3.8.5
+
+# Setup python version
+The project was done with Python 3.8.5
+
+All required packages are written in requirements.txt
+
+We evaluated several architectures and selected a fully connected neural network (FCNN) through rigorous hyperparameter tuning to ensure robust training. The FCNN was constructed using PyTorch’s nn.Linear layers with ReLU activation and 0.5 dropout for regularization. For binary classification tasks, we employed BCEWithLogitsLoss—which integrates sigmoid activation with binary cross-entropy—to enhance numerical stability and gradient flow.
+Training was conducted on Yandex DataSphere using a c1.8 environment (8 vCPU, 64 GB RAM) over 200 epochs. To further mitigate overfitting, we used the AdamW optimizer (lr = 1e3) along with a ReduceLROnPlateau scheduler (factor = 0.5, patience = 3). A fixed threshold of 0.5 was maintained for F1 and Accuracy evaluations, ensuring stability and interpretability,
+particularly on small datasets. The weights of the polyBERT were taken pre-trained from the original article76. The training of models based on chemical embedding was carried out using Transfer Learning approach.
 
 # Contacts:
 To ask more questions about that project, leave any recomendations, suggestions and feedback about that project and its code or get other data be free to contact Ilya Grigoryan:
