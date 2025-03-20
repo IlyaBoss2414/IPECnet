@@ -42,9 +42,15 @@ Fig.2 The scheme of  “IPECnet” model
 ![alt text](images/IPECnet_without_chemistry.jpg)
 Fig.3 The scheme of  “IPECnet without chemistry” model
 
-
 List of features are presented in Features.txt
-The project was done with Python 3.8.5
+
+# IPECnet_test.ipynb
+
+A google colab notebook, which contains code for uploading pre-trained model weights, verifying the results, building bootstrap model comparisons, and outputting learning curves from saved logs using the Lightnings package. Each researcher has the opportunity to reproduce the results.
+
+# Article
+The results of aorh are presented in aarticle in Physical Chemistry Chemical Physics, 2025, DOI: 10.1039/D4CP04775C
+https://pubs.rsc.org/en/content/articlelanding/2025/cp/d4cp04775c/unauth
 
 # Setup python version
 The project was done with Python 3.8.5
